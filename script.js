@@ -1,5 +1,4 @@
 const textInput = document.querySelector('#input-item');
-const btnAdd = document.querySelector('#btn-add');
 const listItem = document.querySelector('#input-list');
 
 function addUpdateEvent(btn, element) {
