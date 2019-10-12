@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+button:focus, input:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.container {
+  width: 940px;
+  height: auto;
+  margin: 0 auto 50px auto;
+  background: #ccc;
+}
+
+.list {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.list h2 {
+  margin-bottom: 10px;
+}
+
+.input {
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  padding: 60px 0 30px 0;
+}
+
+.input h1 {
+  padding-bottom: 30px;
+}
+
+.input input {
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+  border: 2px solid black;
+}
+
+.input button {
+  height: 40px;
+  width: 50px;
+  color: #fff;
+  background: #000;
+  border: none;
+  text-transform: uppercase;
+  margin-left: -8px;
+  cursor: pointer;
+}
+
+.input button:hover {
+  background: rgb(67, 66, 70);
+  transition: 0.2s;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.item span{
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.item button {
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-remove {
+  width: 16px;
+  height: 16px;
+}
+
+.removed {
+  font-style: italic;
+  text-decoration: line-through;
+}
+
