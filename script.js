@@ -2,11 +2,15 @@ const textInput = document.querySelector('#input-item');
 const btnAdd = document.querySelector('#btn-add');
 const listItem = document.querySelector('#input-list');
 
-function addRemoveEvent(btn, element) {
+function addUpdateEvent(btn, element) {
   btn.addEventListener('click', () => {
-    // element.remove();
-    element.classList.add('removed')
-    btn.innerHTML = '✅'
+    if (element.classList.contains('removed')) {
+      element.classList.remove('removed')
+      btn.innerHTML = '❌'
+    } else {
+      element.classList.add('removed')
+      btn.innerHTML = '✅'
+    }
   });
 }
 
@@ -23,5 +27,5 @@ function createToDoItem() {
   btnRemove.classList.add('btn-remove')
   divItem.appendChild(btnRemove);
 
-  addRemoveEvent(btnRemove, divItem);
+  addUpdateEvent(btnRemove, divItem);
 };
