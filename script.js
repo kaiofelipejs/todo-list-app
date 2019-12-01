@@ -1,14 +1,16 @@
 const textInput = document.querySelector('#input-item');
 const listItem = document.querySelector('#input-list');
+const notDoneIcon = '⬜';
+const doneIcon = '✅';
 
 function addUpdateEvent(btn, element) {
   btn.addEventListener('click', () => {
     if (element.classList.contains('removed')) {
       element.classList.remove('removed');
-      btn.innerHTML = '❌';
+      btn.innerHTML = notDoneIcon;
     } else {
       element.classList.add('removed');
-      btn.innerHTML = '✅';
+      btn.innerHTML = doneIcon;
     }
   });
 }
@@ -27,18 +29,17 @@ function createButtonElement() {
 
 function createToDoItem() {
   let divItem = createDivElement();
-  divItem.classList.add('item');
-
   let spanItem = createSpanElement();
-  spanItem.innerText = textInput.value;
-  divItem.appendChild(spanItem);
-
-  listItem.appendChild(divItem);
-
   let btnRemove = createButtonElement();
-  btnRemove.innerHTML = '❌';
+
+  divItem.classList.add('item');
+  spanItem.innerText = textInput.value;
+  btnRemove.innerHTML = notDoneIcon;
   btnRemove.classList.add('btn-remove');
+
+  divItem.appendChild(spanItem);
   divItem.appendChild(btnRemove);
+  listItem.appendChild(divItem);
 
   addUpdateEvent(btnRemove, divItem);
 };
